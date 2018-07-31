@@ -4,8 +4,7 @@ Bastien Willet
 
 ## Comment lancer le programme ?
 
-Via ce lien -> [I love forms](https://iloveformsmiaou.herokuapp.com/)
-C'est tout.
+Lien -> [I love forms](https://iloveformsmiaou.herokuapp.com/)
 
 ## Synopsis
 

@@ -1,0 +1,26 @@
+<h2>Création de nouvel utilisateur avec "form_tag"</h2>
+</br>
+<div class="stily">
+	<!-- Initialisation du form -->
+	<%= form_tag url_for(action: 'createformtag'), method: "post" do %>
+		<!-- Création de la section username -->
+		<div class="form-group">
+			<%= label_tag 'Saisis ton username' %>
+  			<%= text_field_tag :username, "", class: 'form-control', placeholder: "Username" %>
+			<small id="emailHelp", class="form-text text-muted">Pas d'espace STP</small>
+		</div>
+		<!-- Création de la section email -->
+		<div class="form-group">
+  			<%= label_tag 'Saisis ton e-mail' %>
+  			<%= text_field_tag :email, "", class: 'form-control', placeholder: "E-mail" %>
+			<small id="emailHelp", class="form-text text-muted">L'adresse e-mail doit être valide</small>
+		</div>
+		<!-- Création de la section bio -->
+		<div class="form-group">
+    		<%= label_tag 'Quelques mots à propos de toi' %>
+    		<%= text_area_tag :bio, "", class: 'form-control', placeholder: "Sois poête" %>
+		</div>
+    	<!-- Création du bouton Envoyer -->
+		<%= submit_tag "Envoyer", class: "btn btn-primary" %> <a href ="/">Retour</a>
+	<% end %>
+</div>

@@ -1,0 +1,26 @@
+<h2>Création de nouvel utilisateur avec "form_for"</h2>
+</br>
+<div class="stily">
+	<!-- Initialisation du form -->
+	<%= form_for @user, url: {action: "createformfor"} do |f| %>
+		<!-- Création de la section username -->
+		<div class="form-group">
+			<%= f.label 'Saisis ton username' %>
+			<%= f.text_field :username, class:"form-control", placeholder:"Username" %>
+			<small id="emailHelp" class="form-text text-muted">Pas d'espace STP</small>
+		</div>
+		<!-- Création de la section email -->
+		<div class="form-group">
+			<%= f.label 'Saisis ton e-mail' %>
+			<%= f.text_field :email, class:"form-control", placeholder:"E-mail" %>
+			<small id="emailHelp" class="form-text text-muted">L'adresse e-mail doit être valide</small>
+		</div>
+		<!-- Création de la section bio -->
+		<div class="form-group">
+			<%= f.label 'Quelques mots à propos de toi' %>
+			<%= f.text_area :bio, class:"form-control", placeholder:"Sois poête" %>
+		</div>
+		<!-- Création du bouton Envoyer -->
+		<%= f.submit "Envoyer", class:"btn btn-primary" %> <a href ="/">Retour</a>
+	<% end %>
+</div>

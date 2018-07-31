@@ -1,0 +1,28 @@
+<h2>Création de nouvel utilisateur avec "form"</h2>
+</br>
+<div class="stily">
+	<!-- Initialisation du form -->
+	<form action="/form" method="post">
+			<!-- Gestion du token -->
+			<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" width: 650px>
+		<!-- Création de la section username -->
+		<div class="form-group">
+			<label for="username">Saisis ton username</label>
+			<input type="text" name="username" class="form-control" placeholder="Username">
+			<small id="emailHelp" class="form-text text-muted">Pas d'espace STP</small>
+		</div>
+		<!-- Création de la section email -->
+		<div class="form-group">
+			<label for="email">Saisis ton e-mail</label>
+  	 		<input type="text" name="email" class="form-control" placeholder="E-mail">
+			<small id="emailHelp" class="form-text text-muted">L'adresse e-mail doit être valide</small>
+		</div>
+		<!-- Création de la section bio -->
+		<div class="form-group">
+			<label for="bio">Quelques mots à propos de toi</label>
+			​<textarea type="textarea" name="bio" class="form-control" placeholder="Sois poête"></textarea>
+		</div>
+		<!-- Création du bouton Envoyer -->
+		<input type="submit" value="Envoyer" class="btn btn-primary"> <a href ="/">Retour</a>
+	</form>
+</div>
